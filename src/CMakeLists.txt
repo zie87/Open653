@@ -10,7 +10,8 @@ add_library(drivers
 	${SRC_DIR}/drivers/rtc.c
 )
 target_link_libraries(drivers
-	CMSIS
+    PUBLIC
+    Open653::CMSIS
 	STM32f4xx_HAL_Driver
 )
 
@@ -18,7 +19,8 @@ add_library(APEX
 	${SRC_DIR}/partitions/utils/apex.c
 )
 target_link_libraries(APEX
-	CMSIS
+    PUBLIC
+    Open653::CMSIS
 	STM32f4xx_HAL_Driver
 )
 
@@ -80,8 +82,8 @@ add_executable(${PROJECT_NAME}
 )
 target_link_libraries(${PROJECT_NAME}
 	drivers
-	CMSIS
-	STM32f4xx_HAL_Driver
+    Open653::CMSIS
+    Open653::STM32HAL
 
 	yellow_toggler
 	red_toggler
@@ -89,5 +91,3 @@ target_link_libraries(${PROJECT_NAME}
 	idle_sys
 	evil
 )
-# Command for writing OS to target flash.
-open_ocd_write_flash(${PROJECT_NAME})
