@@ -13,7 +13,7 @@ class ParseXML:
 
 
     def get_xml(self):
-        print "reading in xml from file %s" % (self.xml_schema)
+        print("reading in xml from file %s" % (self.xml_schema))
         with open (self.xml_schema, "r") as xmlfile:
             xml=xmlfile.read()
         xmlfile.closed
@@ -232,7 +232,7 @@ class ParseXML:
             self.write_to_file_c(channel_wrapper)
 
         else:
-            print "unknown sub_element: %s" % (sub_element)
+            print("unknown sub_element: %s" % (sub_element))
 
         return sub_element_struct
 

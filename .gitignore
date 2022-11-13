@@ -2,7 +2,6 @@
 xml_data.c
 xml_data.h
 
-
 # Windows files
 Thumbs.db
 thumbs.db
@@ -10,15 +9,9 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-
 # Python libs
 xmltodict.pyc
 
-
 # Everything in the build dir
 build/*
-
-
-# Ignore dot-folders/files, except the gitignore file
-.*
-!.gitignore
+__pycache__/
